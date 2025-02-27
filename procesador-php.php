@@ -45,7 +45,7 @@ if($envio_exitoso) {
     echo json_encode(['success' => false, 'message' => 'Error al enviar el mensaje']);
 }
 
-// Función opcional para guardar contactos en base de datos
+/* Función opcional para guardar contactos en base de datos
 function insertarContacto($nombre, $email, $empresa, $mensaje) {
     // Configuración de la base de datos
     $servidor = "localhost";
@@ -73,5 +73,5 @@ function insertarContacto($nombre, $email, $empresa, $mensaje) {
     $conn->close();
     
     return $resultado;
-}
+}*/
 ?>
