@@ -1,6 +1,6 @@
 <?php
 // Configuración de correo
-$destinatario = "ventas@manastic.cl";
+$destinatario = "contacto@manastic.cl";
 $asunto = "Nuevo contacto desde la web manastic.cl";
 
 // Validación de campos
