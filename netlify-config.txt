@@ -1,0 +1,15 @@
+# Configuración global de Netlify
+[build]
+  publish = "/"
+  
+# Configuración de redirecciones
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+# Configuración para formularios
+[forms]
+  [forms.contact]
+    name = "contact"
+    success_url = "/success"
