@@ -12,4 +12,4 @@
 [forms]
   [forms.contact]
     name = "contact"
-    success_url = "/thank-you-page.html"
+    success_url = "/thank-you-page"
