@@ -5,7 +5,7 @@
       "emails": [
         {
           "from": "no-reply@netlify.com",
-          "to": "contacto@manastic.cl",
+          "to": "juanmancillaster@gmail.com",
           "subject": "Nuevo contacto desde el sitio web de Manastic",
           "includeData": true,
           "replyTo": "{email}"
