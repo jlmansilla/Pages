@@ -5,7 +5,7 @@
 # Configuración de redirecciones
 [[redirects]]
   from = "/success"
-  to = "/thank-you-page.html"
+  to = "/thank-you-page"
   status = 200
 
 # Configuración para formularios
