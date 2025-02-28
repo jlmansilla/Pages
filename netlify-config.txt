@@ -5,11 +5,11 @@
 # Configuración de redirecciones
 [[redirects]]
   from = "/success"
-  to = "/thank-you-page"
+  to = "/thank-you-page,html"
   status = 200
 
 # Configuración para formularios
 [forms]
   [forms.contact]
     name = "contact"
-    success_url = "/thank-you-page"
+    success_url = "/thank-you-page.html"
