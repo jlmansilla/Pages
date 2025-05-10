@@ -89,7 +89,56 @@
         .cta-button:hover {
             background-color: var(--secondary-color);
         }
-        
+        /* Estilos para el botón hamburguesa */
+            .hamburger {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none; /* Ocultar por defecto */
+            color: var(--text-color);
+        }
+        /* Mostrar el botón hamburguesa en pantallas pequeñas */
+            @media (max-width: 768px) {
+            .hamburger {
+            display: block;
+        }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -462,9 +504,9 @@
+  
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 20px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
         /* Hero Section */
         .hero {
             padding: 150px 0 100px;
@@ -408,8 +457,11 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <img src="Imagenes/your-logo.png" alt="Manastic Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">                    
+                    <img src="Imagenes/your-logo.png" alt="Manastic Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">
                 </div>
+                <button class="hamburger" aria-label="Abrir menú">
+                    ☰
+                </button>
                 <ul class="nav-links">
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#por-que">¿Por qué elegirnos?</a></li>
@@ -419,7 +471,6 @@
             </nav>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -431,6 +482,22 @@
         </div>
     </section>
 
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -703,6 +745,22 @@ <h3>Contáctanos</h3>
+  
     <!-- Servicios -->
     <section id="servicios" class="services">
         <div class="container">
@@ -472,7 +539,6 @@
             </div>
         </div>
     </section>
-
     <!-- Por qué elegirnos -->
     <section id="por-que" class="why-us">
         <div class="container">
@@ -516,7 +582,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonios -->
     <section id="testimonios" class="testimonials">
         <div class="container">
@@ -558,7 +623,6 @@
             </div>
         </div>
     </section>
-
     <!-- CTA Sección con formulario Netlify -->
     <section id="contacto" class="cta-section">
         <div class="container">
@@ -598,7 +662,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -657,5 +720,12 @@
             }, 1000);
         }
     </script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
-</html>
+</html
