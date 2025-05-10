@@ -89,7 +89,42 @@
         .cta-button:hover {
             background-color: var(--secondary-color);
         }
-        
+        /* Estilos para el botón hamburguesa */
+            .hamburger {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none; /* Ocultar por defecto */
+            color: var(--text-color);
+        }
+
+        /* Mostrar el botón hamburguesa en pantallas pequeñas */
+            @media (max-width: 768px) {
+            .hamburger {
+            display: block;
+        }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
         /* Hero Section */
         .hero {
             padding: 150px 0 100px;
