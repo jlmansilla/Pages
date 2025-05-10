@@ -443,8 +443,11 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <img src="Imagenes/your-logo.png" alt="Manastic Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">                    
+                    <img src="Imagenes/your-logo.png" alt="Manastic Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">
                 </div>
+                <button class="hamburger" aria-label="Abrir menú">
+                    ☰
+                </button>
                 <ul class="nav-links">
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#por-que">¿Por qué elegirnos?</a></li>
@@ -692,5 +695,14 @@
             }, 1000);
         }
     </script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
 </body>
 </html>
