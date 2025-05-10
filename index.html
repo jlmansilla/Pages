@@ -586,6 +586,58 @@
 .animation-delay-600 {
     animation-delay: 0.6s;
 }
+/* Animación Slide In desde la izquierda */
+  @keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Clase base para todas las tarjetas animadas */
+
+
+/* Estilo base para service-card */
+.service-card {
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+/* Clase activa cuando aparece */
+.service-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hover sobre tarjeta visible */
+.service-card.visible:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icono y texto */
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: color 0.3s;
+    z-index: 2;
+    position: relative;
+}
+.service-card:hover .service-icon {
+    color: var(--secondary-color);
+}
+
     </style>
 </head>
 <body>
@@ -867,5 +919,23 @@
             navLinks.classList.toggle('active');
         });
     </script>
+    <script>
+    // Animación de aparición por scroll en .service-card
+    const cards = document.querySelectorAll('.service-card');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+</script>
 </body>
 </html
