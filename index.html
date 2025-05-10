@@ -98,12 +98,17 @@
             display: none; /* Ocultar por defecto */
             color: var(--text-color);
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e4bc186c1c71c0abad4242ce5429837306af29b
         /* Mostrar el botón hamburguesa en pantallas pequeñas */
             @media (max-width: 768px) {
             .hamburger {
             display: block;
         }
 
+<<<<<<< HEAD
     .nav-links {
         display: none;
         flex-direction: column;
@@ -124,6 +129,53 @@
     
     @@ -462,9 +504,9 @@
   
+=======
+    /* Animaciones */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-out;
+  }
+
+  /* Gradiente animado */
+  .hero {
+    background: linear-gradient(-45deg, var(--accent-color), var(--primary-color), var(--secondary-color), var(--accent-color));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+            
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+>>>>>>> 4e4bc186c1c71c0abad4242ce5429837306af29b
         position: absolute;
         top: 100%;
         right: 0;
@@ -132,9 +184,17 @@
         width: 200px;
         padding: 20px;
     }
+<<<<<<< HEAD
     .nav-links.active {
         display: flex;
     }
+=======
+
+    .nav-links.active {
+        display: flex;
+    }
+
+>>>>>>> 4e4bc186c1c71c0abad4242ce5429837306af29b
     .nav-links li {
         margin: 10px 0;
     }
@@ -475,9 +535,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transformamos Tu Negocio Con Soluciones Tecnológicas</h1>
-                <p>Asesoría experta para impulsar tu empresa en la era digital. Optimizamos tus procesos y maximizamos tu eficiencia tecnológica.</p>
-                <a href="#contacto" class="cta-button">Solicita una consulta gratuita</a>
+                <h1 class="animate-fadeInUp">Transformamos Tu Negocio Con Soluciones Tecnológicas</h1>
+                <p class="animate-fadeInUp" style="animation-delay: 0.3s;">Asesoría experta para impulsar tu empresa en la era digital. Optimizamos tus procesos y maximizamos tu eficiencia tecnológica.</p>
+                <a href="#contacto" class="cta-button animate-fadeInUp" style="animation-delay: 0.6s;">Solicita una consulta gratuita</a>
             </div>
         </div>
     </section>
@@ -723,9 +783,33 @@
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e4bc186c1c71c0abad4242ce5429837306af29b
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
     </script>
+<<<<<<< HEAD
+=======
+    <script>
+  // Anima las tarjetas de servicios cuando aparecen en pantalla
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.service-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+>>>>>>> 4e4bc186c1c71c0abad4242ce5429837306af29b
 </body>
 </html
